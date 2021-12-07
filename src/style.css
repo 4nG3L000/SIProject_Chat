@@ -1,0 +1,248 @@
+body {
+  background-image: url('background.jpg');
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #fff;
+  overflow: hidden;
+}
+
+.content {
+  height: 100vh;
+  /* margin: 20px; */
+  background: #00000033;
+  padding: 0;
+  border-radius: 7px;
+  backdrop-filter: blur(10px);
+}
+
+.panel-left{
+  height: 100vh;
+  background-color: #eeeeee33;
+  border-radius: 7px 0 0 7px;
+}
+.panel-right{
+  height: 100vh;
+  border-left: 2px solid #cfcece00;
+}
+.panel-right-header{
+  background: #ffffff33;
+  backdrop-filter: blur(5px);
+}
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+}
+
+.text-m {
+  color: #ccc;
+}
+
+.settings-tray {
+  background: #eeeeee00;
+  padding: 10px 15px;
+  border-radius: 7px 7px 0 0;
+  /* backdrop-filter: blur(5px); */
+}
+.settings-tray--right {
+  float: right;
+}
+.settings-tray--right span {
+  margin-top: 10px;
+  font-size: 25px;
+  color: #fff;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+.settings-tray--right span:hover,
+.chat-box-tray span:hover {
+  color: #9fff22;
+  cursor: pointer;
+}
+
+.search-box {
+  background: #fafafa88;
+  padding: 10px 13px;
+  margin-bottom: 2px;
+  backdrop-filter: blur(5px);
+}
+.search-box .input-wrapper {
+  background: #fff;
+  border-radius: 40px;
+}
+.search-box .input-wrapper span {
+  color: grey;
+  margin-left: 7px;
+  vertical-align: middle;
+}
+
+input {
+  border: none;
+  border-radius: 30px;
+  width: 80%;
+}
+input::placeholder {
+  color: #9b9b9b;
+  font-weight: 300;
+  margin-left: 20px;
+}
+input:focus {
+  outline: none;
+}
+.friends{
+  height: 80.5%;
+  overflow-y: auto;
+}
+
+.settings-tray{
+  display: flex;
+}
+.friend-drawer {
+  padding: 10px 15px;
+  display: flex;
+  vertical-align: baseline;
+  /* background: #ffffff33; */
+  transition: 0.3s ease;
+  backdrop-filter: blur(0px);
+}
+.friend-drawer--grey {
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(5px);
+  border-radius: 0 7px 0 0;
+}
+.friend-drawer .text,
+.settings-tray .text {
+  margin-left: 12px;
+  width: 90%;
+}
+.friend-drawer .text h6,
+.settings-tray .text h6 {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.friend-drawer .text p {
+  margin: 0;
+}
+/* .friend-drawer .time {
+  color: grey;
+} */
+.friend-drawer--onhover:hover {
+  background: #d7d7d852;
+  cursor: pointer;
+}
+.friend-drawer--onhover:hover p,
+.friend-drawer--onhover:hover h6,
+.friend-drawer--onhover:hover .time {
+  color: #fff !important;
+}
+
+hr {
+  margin: 5px auto;
+  width: 60%;
+}
+
+.chat-bubble {
+  display: inline-block;
+  max-width: 60%;
+  padding: 10px 14px;
+  color: #eee;
+  margin: 10px 30px;
+  position: relative;
+  animation: fadeIn 1s ease-in;
+}
+.chat-bubble:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-top: 0;
+  margin-top: 0%;
+}
+.chat-bubble--left{
+  border-radius: 0 9px 9px 9px;
+  background-color: #88888866;
+}
+.chat-bubble--right{
+  background-color: #da0053;
+  border-radius: 9px 0 9px 9px;
+  float: right;
+}
+.chat-bubble--left:after {
+  left: 0;
+  border-right-color: #88888866;
+  border-left: 0;
+  margin-left: -12px;
+}
+.chat-bubble--right:after {
+  right: 0;
+  border-left-color: #da0053;
+  border-right: 0;
+  margin-right: -12px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.chat-panel{
+  height: 92vh;
+  /* height: 74.5vh; */
+  overflow-y: auto;
+}
+
+@media (min-height: 662px) {
+  .chat-panel{
+    height: 93vh;
+    overflow-y: auto;
+  }
+}
+
+.chat-box-tray {
+  background: #ffffff33;
+  display: flex;
+  align-items: baseline;
+  padding: 10px 15px;
+  align-items: center;
+  border-radius: 0 0 7px 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+}
+.chat-box-tray input {
+  margin: 0 10px;
+  padding: 4px 12px;
+  width: 90%;
+}
+.chat-box-tray span {
+  color: rgb(255, 247, 247);
+  font-size: 30px;
+  vertical-align: middle;
+}
+.chat-box-tray .dropdown-menu i {
+  font-size: 26px;
+  cursor: pointer;
+}
+.chat-box-tray .dropdown-menu i:hover {
+  color: #da0053;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #eeeeee55;
+}
