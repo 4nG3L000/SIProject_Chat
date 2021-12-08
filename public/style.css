@@ -20,7 +20,8 @@ body {
 
 .login #username {
   padding: 6px 12px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .content {
@@ -38,6 +39,15 @@ body {
   background-color: #eeeeee33;
   border-radius: 7px 0 0 7px;
 }
+
+.open-users {
+  display: none;
+}
+.panel-mobile {
+  left: 0 !important;
+  transition: all .3s ease-in-out;
+}
+
 .panel-right{
   height: 100vh;
   border-left: 2px solid #cfcece00;
@@ -226,8 +236,29 @@ hr {
 
 .chat-panel{
   height: 92vh;
-  /* height: 74.5vh; */
   overflow-y: auto;
+}
+
+@media screen and (max-width: 570px) {
+  .panel-left{
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    z-index: 100;
+    transition: all .3s ease-in-out;
+  }
+  .open-users {
+    display: unset;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  .open-users:hover {
+   color: #baff31;
+  }
 }
 
 @media (min-height: 662px) {
@@ -256,13 +287,6 @@ hr {
   color: rgb(255, 247, 247);
   font-size: 30px;
   vertical-align: middle;
-}
-.chat-box-tray .dropdown-menu i {
-  font-size: 26px;
-  cursor: pointer;
-}
-.chat-box-tray .dropdown-menu i:hover {
-  color: #da0053;
 }
 
 ::-webkit-scrollbar {
