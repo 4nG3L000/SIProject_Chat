@@ -12,27 +12,33 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<div class="login">
+	<div class="container">
+		<div class="row">
+			<div class="col-6 offset-3">
+				<label id="lbl-username">Ingresar Nombre de usuario:</label>
+				<input type="text" id="username">
+				<button type="button" class="btn btn-danger" id="ingresar"> Ingresar <i class="fas fa-sign-in-alt"></i> </button>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="content">
 	<div class="row g-0">
 	  <div class="col-sm-4 panel-left">
 		<div class="settings-tray">
 		  <img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/filip.jpg" alt="Profile img">
 		  <div class="text">
-			<h6>Nombre</h6>
+			<h6 id="user">Nombre</h6>
 		  </div>
 		  <span class="settings-tray--right">
 			<span class="material-icons">more_vert</span>
 		  </span>
 		</div>
-		<div class="search-box">
-		  <div class="input-wrapper">
-			<span class="material-icons">search</span>
-			<input placeholder="Buscar" type="text">
-		  </div>
-		</div>
 
 		<div class="friends">
-			<div class="friend-drawer friend-drawer--onhover">
+			  <div class="friend-drawer friend-drawer--onhover">
 				<img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg" alt="">
 				<div class="text">
 				  <h6>Robo Cop</h6>
@@ -41,131 +47,20 @@
 				<span class="text-m small">13:21</span>
 			  </div>
 			  <hr>
-			  <div class="friend-drawer friend-drawer--onhover">
-				<img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/optimus-prime.jpeg" alt="">
-				<div class="text">
-				  <h6>Optimus</h6>
-				  <p class="text-m">Wanna grab a beer?</p>
-				</div>
-				<span class="text-m small">00:32</span>
-			  </div>
-			  <hr>
-			  <div class="friend-drawer friend-drawer--onhover ">
-				<img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/real-terminator.png" alt="">
-				<div class="text">
-				  <h6>Skynet</h6>
-				  <p class="text-m">Seen that canned piece of s?</p>
-				</div>
-				<span class="text-m small">13:21</span>
-			  </div>
-			  <hr>
-			  <div class="friend-drawer friend-drawer--onhover">
-				<img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/termy.jpg" alt="">
-				<div class="text">
-				  <h6>Termy</h6>
-				  <p class="text-m">Im studying spanish...</p>
-				</div>
-				<span class="text-m small">13:21</span>
-			  </div>
-			  <hr>
-			  <div class="friend-drawer friend-drawer--onhover">
-				<img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rick.jpg" alt="">
-				<div class="text">
-				  <h6>Richard</h6>
-				  <p class="text-m">I'm not sure...</p>
-				</div>
-				<span class="text-m small">13:21</span>
-			  </div>
-			  <hr>
-			  <div class="friend-drawer friend-drawer--onhover">
-				<img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/rachel.jpeg" alt="">
-				<div class="text">
-				  <h6>XXXXX</h6>
-				  <p class="text-m">Hi, wanna see something?</p>
-				</div>
-				<span class="text-m small">13:21</span>
-			  </div>
+			  
 		</div>
 		
 	  </div>
 	  <div class="col-sm-8 panel-right">
-		<!-- <div class="panel-right-header">
-			<div class="friend-drawer g-0 friend-drawer--grey">
-			<img class="profile-image" src="https://www.clarity-enhanced.net/wp-content/uploads/2020/06/robocop.jpg" alt="">
-			<div class="text">
-			  <h6>Robo Cop</h6>
-			  <p class="text-m">En Linea</p>
-			</div>
-			<span class="settings-tray--right">
-			 <span class="material-icons">more_vert</span>
-			</span>
-		  </div>
-		</div> -->
 		<div class="chat-panel">
-		  <div class="row g-0">
-			<div class="col-12">
-			  <div class="chat-bubble chat-bubble--left">
-				Hello what happen! orjwhjkdfhgjdg bhjdbjvjdhbfjvhbfv
-			  </div>
-			</div>
-		  </div>
-		  <div class="row g-0">
-			<div class="col-12">
-			  <div class="chat-bubble chat-bubble--right" style="float: right;">
-				Hello dude!
-				Hello dude!
-				Hello dude!
-			  </div>
-			</div>
-		  </div>
-		  <div class="row g-0">
-			<div class="col-12">
-			  <div class="chat-bubble chat-bubble--right" style="float: right;">
-				Hello dude!
-			  </div>
-			</div>
-		  </div>
-		  <div class="row g-0">
-			<div class="col-12">
-			  <div class="chat-bubble chat-bubble--left">
-				Hello dude!
-			  </div>
-			</div>
-		  </div>
-		  <div class="row g-0">
-			<div class="col-12">
-			  <div class="chat-bubble chat-bubble--left">
-				Hello dude!
-			  </div>
-			</div>
-		  </div>
-		  <div class="row g-0">
-			<div class="col-12">
-			  <div class="chat-bubble chat-bubble--right" style="float: right;">
-				Hello dude!
-			  </div>
-			</div>
-		  </div>
-		  <div class="row g-0">
-			<div class="col-12">
-			  <div class="chat-bubble chat-bubble--right" style="float: right;">
-				Hello dude!
-			  </div>
-			</div>
-		  </div>
-		  <div class="row g-0">
-			<div class="col-12">
-			  <div class="chat-bubble chat-bubble--left">
-				Hello dude!
-			  </div>
-			</div>
-		  </div>
+		  <!-- aqui esta la lista de mensajes -->
+		  
 		</div>
 		<div class="row tray">
 			<div class="col-12">
 			  <div class="chat-box-tray">
-				<input type="text" placeholder="Escribe tu mensaje aqui...">
-				<span class="material-icons">send</span>
+				<input type="text" id="message" placeholder="Escribe tu mensaje aqui...">
+				<span class="material-icons" id="send">send</span>
 			  </div>
 			</div>
 		  </div>
