@@ -45,6 +45,7 @@ body {
   height: 100vh;
   background-color: #eeeeee33;
   border-radius: 7px 0 0 7px;
+  backdrop-filter: blur(5px);
 }
 
 .open-users {
@@ -77,7 +78,7 @@ body {
   background: #eeeeee00;
   padding: 10px 15px;
   border-radius: 7px 7px 0 0;
-  /* backdrop-filter: blur(5px); */
+  backdrop-filter: blur(5px);
 }
 .settings-tray--right {
   float: right;
@@ -196,7 +197,7 @@ hr {
 }
 .chat-bubble--left{
   border-radius: 0 9px 9px 9px;
-  background-color: #88888866;
+  background-color: #000000af;
 }
 .message-autor-right{
   font-size: 11px;
@@ -220,7 +221,7 @@ hr {
 }
 .chat-bubble--left:after {
   left: 0;
-  border-right-color: #88888866;
+  border-right-color: #000000af;
   border-left: 0;
   margin-left: -12px;
 }
@@ -242,6 +243,7 @@ hr {
     top: 0;
     left: -250px;
     width: 250px;
+    background-color: #1a1818d8 !important;
     z-index: 100;
     transition: all .3s ease-in-out;
   }
