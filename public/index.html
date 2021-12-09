@@ -16,10 +16,17 @@
 <!-- partial:index.partial.html -->
 <div class="login">
 	<div class="container">
+		<div class="row username-error">
+			<div class="col-xl-4 col-lg-6 col-md-8 col-sm-8 col-10 offset-xl-4 offset-lg-3 offset-md-2 offset-sm-2 offset-1 text-center">
+				<div class="alert alert-danger" role="alert">
+					Usuario no ingresado o ya existe!
+				</div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-xl-4 col-lg-6 col-md-8 col-sm-8 col-10 offset-xl-4 offset-lg-3 offset-md-2 offset-sm-2 offset-1 text-center login-box">
 				<label id="lbl-username">Ingresar Nombre de usuario:</label>
-				<input type="text" id="username">
+				<input type="text" id="username" value="">
 				<button type="button" class="btn btn-danger" id="ingresar"> Ingresar <i class="fas fa-sign-in-alt"></i> </button>
 			</div>
 		</div>

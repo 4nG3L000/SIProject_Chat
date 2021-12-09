@@ -13,6 +13,10 @@ body {
   margin-top: 30vh;
 }
 
+.username-error{
+  display: none;
+}
+
 .login .login-box{
   background-color: #33333333;
   backdrop-filter: blur(10px);

@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
           login.style.display = 'none'
           content.style.display = 'block'
         }else{
-          console.log("el usuario ya existe!");
+          document.querySelector('.username-error').style.display = 'unset'
         }
       });
   }

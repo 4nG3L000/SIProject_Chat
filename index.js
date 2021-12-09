@@ -36,16 +36,21 @@ io.on('connection', (socket) => {
     })
 
     socket.on('new:user_conn', async (data, cb)=>{
+      console.log("vacio:"+data);
       if(users_list.indexOf(data) != -1){
         cb(false)
       }else{
-        cb(true)
-        socket.user = data
-        users_list.push(socket.user)
-        io.sockets.emit('users:list', users_list)
-
-        let old_messages = await Message.find()
-        socket.emit('old:messages', old_messages)
+        if (data != "") {
+          cb(true)
+          socket.user = data
+          users_list.push(socket.user)
+          io.sockets.emit('users:list', users_list)
+  
+          let old_messages = await Message.find()
+          socket.emit('old:messages', old_messages)
+        } else {
+          cb(false)
+        }
       }
     })
   });
