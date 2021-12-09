@@ -1,0 +1,16 @@
+{
+    "name": "PWA ISProrject",
+    "short_name": "Chat",
+    "description": "Progressive Web App del proyecto para industria del software",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#764ABC",
+    "background_color": "#764ABC",
+    "icons": [
+                {
+                    "src": "./assets/images/Avatar.png",
+                    "type": "image/png",
+                    "sizes": "512x512"
+                }
+             ]
+  }

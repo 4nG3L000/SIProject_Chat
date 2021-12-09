@@ -20,6 +20,7 @@ io.on('connection', (socket) => {
     console.log('a user connected');
 
     socket.on('disconnect', () => {
+      console.log('user disconnect');
       if (!socket.user) return
       users_list.splice(users_list.indexOf(socket.user), 1)
       io.sockets.emit('users:list', users_list)
@@ -44,7 +45,6 @@ io.on('connection', (socket) => {
         io.sockets.emit('users:list', users_list)
 
         let old_messages = await Message.find()
-        console.log(old_messages);
         socket.emit('old:messages', old_messages)
       }
     })

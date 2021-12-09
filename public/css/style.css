@@ -1,5 +1,5 @@
 body {
-  background-image: url('assets/images/background.jpg');
+  background-image: url('../assets/images/background.jpg');
   /* background-repeat: no-repeat; */
   background-size: cover;
   -webkit-font-smoothing: antialiased;
@@ -10,7 +10,14 @@ body {
 }
 
 .login{
-  margin-top: 40vh;
+  margin-top: 30vh;
+}
+
+.login .login-box{
+  background-color: #33333333;
+  backdrop-filter: blur(10px);
+  padding: 20px 0 20px 0;
+  border-radius: 7px;
 }
 
 .login #lbl-username{
