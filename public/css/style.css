@@ -52,7 +52,7 @@ body {
   display: none;
 }
 .panel-mobile {
-  left: 0 !important;
+  left: -12px !important;
   transition: all .3s ease-in-out;
 }
 
@@ -241,7 +241,7 @@ hr {
   .panel-left{
     position: absolute;
     top: 0;
-    left: -250px;
+    left: -270px;
     width: 250px;
     background-color: #1a1818d8 !important;
     z-index: 100;
