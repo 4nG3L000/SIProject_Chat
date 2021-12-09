@@ -26,6 +26,21 @@ window.addEventListener("DOMContentLoaded", () => {
         }
       });
   }
+  
+  document.querySelector('#message').onkeydown = function (event) {
+    var codigo = event.which || event.keyCode;
+  
+    if(codigo === 13){
+      if (new_message.value) {
+        data = {
+          message: new_message.value,
+          username: active_user
+        }
+        socket.emit('chat:message', data);
+        new_message.value = '';
+      }
+    } 
+  }
 
   document.querySelector('#send').onclick = function (event) {
     if (new_message.value) {
@@ -62,7 +77,7 @@ window.addEventListener("DOMContentLoaded", () => {
                               </div>
                             `
     }
-
+    chat_panel.scrollTo(9999, chat_panel.scrollHeight);
   })
 
   socket.on('users:list', (res)=>{
@@ -85,7 +100,6 @@ window.addEventListener("DOMContentLoaded", () => {
   })
 
   socket.on('old:messages', (data)=>{
-    console.log(data[0].user, active_user)
     for(i in data){
       if (data[i].user == active_user) {
         chat_panel.innerHTML += `
@@ -111,6 +125,6 @@ window.addEventListener("DOMContentLoaded", () => {
                               `
       }
     }
+    chat_panel.scrollTo(9999, chat_panel.scrollHeight);
   })
 })
-
