@@ -1,12 +1,20 @@
 const mongoose = require('mongoose')
 const {Schema} = mongoose
+let d = new Date()
+
+let date = `${d.getFullYear()}/${d.getMonth()}/${d.getDay()}`
+let hour = `${d.getHours()}:${d.getMinutes()}`
 
 const MessageSchema = new Schema({
     user: String,
     msg: String,
-    created: {
-        type: Date,
-        default: Date.now
+    date: {
+        type: String,
+        default: date
+    },
+    hour: {
+        type: String,
+        default: hour
     }
 })
 

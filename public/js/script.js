@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
   let h6 = document.querySelector('#user')
   let panel_left = document.querySelector('.panel-left')
   let friends = document.querySelector('.friends')
+
   let active_user
 
   document.querySelector('.open-users').onclick = function (event) {
@@ -54,13 +55,14 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   socket.on('res:message', (res)=>{
-    if (res.username == active_user) {
+    if (res[0].user == active_user) {
       chat_panel.innerHTML += `
                             <div class="row g-0">
                               <div class="col-12">
                                 <div class="chat-bubble chat-bubble--right text-end">
-                                  <span class="message-autor-right">${res.username}</span>
-                                  ${res.message}
+                                  <span class="message-autor-right">${res[0].user}</span>
+                                  <span>${res[0].msg}</span>
+                                  <span class="message-hour-right">${res[0].hour}</span>
                                 </div>
                               </div>
                             </div>
@@ -70,8 +72,9 @@ window.addEventListener("DOMContentLoaded", () => {
                               <div class="row g-0">
                                 <div class="col-12">
                                   <div class="chat-bubble chat-bubble--left text-start">
-                                  <span class="message-autor-left">${res.username}</span>
-                                  ${res.message}
+                                  <span class="message-autor-left">${res[0].user}</span>
+                                  <span>${res[0].msg}</span>
+                                  <span class="message-hour-left">${res[0].hour}</span>
                                   </div>
                                 </div>
                               </div>
@@ -90,7 +93,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     <h6>${res[i]}</h6>
                     <p class="text-m">Disponible</p>
                   </div>
-                    <span class="text-m small">13:21</span>
+                    <span class="text-m small"></span>
                   </div>
                 <hr>`
       }
@@ -107,7 +110,8 @@ window.addEventListener("DOMContentLoaded", () => {
                                 <div class="col-12">
                                   <div class="chat-bubble chat-bubble--right text-end">
                                     <span class="message-autor-right">${data[i].user}</span>
-                                    ${data[i].msg}
+                                    <span>${data[i].msg}</span>
+                                    <span class="message-hour-right">${data[i].hour}</span>
                                   </div>
                                 </div>
                               </div>
@@ -118,7 +122,8 @@ window.addEventListener("DOMContentLoaded", () => {
                                   <div class="col-12">
                                     <div class="chat-bubble chat-bubble--left text-start">
                                     <span class="message-autor-left">${data[i].user}</span>
-                                    ${data[i].msg}
+                                    <span>${data[i].msg}</span>
+                                    <span class="message-hour-left">${data[i].hour}</span>
                                     </div>
                                   </div>
                                 </div>

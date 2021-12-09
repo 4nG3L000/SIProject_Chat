@@ -203,16 +203,25 @@ hr {
   border-radius: 0 9px 9px 9px;
   background-color: #000000af;
 }
+.message-autor-left,
 .message-autor-right{
   font-size: 11px;
   color: #ffc506;
   margin-top: -10px;
 }
-.message-autor-left{
+.message-hour-left,
+.message-hour-right{
   font-size: 11px;
   color: #ffc506;
-  margin-top: -10px;
+  margin-bottom: -10px;
 }
+.message-hour-left{
+  float: right !important;
+}
+.message-hour-right{
+  float: left !important;
+}
+
 .chat-bubble--right{
   background-color: #250657;
   border-radius: 9px 0 9px 9px;

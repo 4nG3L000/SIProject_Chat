@@ -31,12 +31,11 @@ io.on('connection', (socket) => {
           user: socket.user,
           msg: data.message
         }).save()
-
-        io.sockets.emit('res:message', data)
+        let last_msg = await Message.find({"user":socket.user}).sort({date:-1, hour:-1}).limit(1)
+        io.sockets.emit('res:message', last_msg)
     })
 
     socket.on('new:user_conn', async (data, cb)=>{
-      console.log("vacio:"+data);
       if(users_list.indexOf(data) != -1){
         cb(false)
       }else{
