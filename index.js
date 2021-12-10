@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
           user: socket.user,
           msg: data.message
         }).save()
-        let last_msg = await Message.find({"user":socket.user}).sort({date:-1, hour:-1}).limit(1)
+        let last_msg = await Message.find({"user":socket.user}).sort({date:-1}).limit(1)
         io.sockets.emit('res:message', last_msg)
     })
 
