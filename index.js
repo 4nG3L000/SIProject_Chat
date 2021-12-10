@@ -27,9 +27,11 @@ io.on('connection', (socket) => {
     });
 
     socket.on('chat:message', async (data) => {
-        await new Message({
+        let d =new Date()
+         await new Message({
           user: socket.user,
-          msg: data.message
+          msg: data.message,
+          hour: `${d.getHours()}:${d.getMinutes()}`
         }).save()
         let last_msg = await Message.find({"user":socket.user}).sort({date:-1}).limit(1)
         io.sockets.emit('res:message', last_msg)

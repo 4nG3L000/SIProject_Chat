@@ -1,21 +1,19 @@
 const mongoose = require('mongoose')
 const {Schema} = mongoose
-let d = new Date()
+
 
 //let date = `${d.getFullYear()}/${d.getMonth()}/${d.getDay()}`
-let hour = `${d.getHours()}:${d.getMinutes()}`
+//let hour = `${d.getHours()}:${d.getMinutes()}`
 
 const MessageSchema = new Schema({
     user: String,
     msg: String,
+    hour: String,
     date: {
         type: Date,
         default: Date.now
-    },
-    hour: {
-        type: String,
-        default: hour
     }
+    
 })
 
 module.exports = mongoose.model('Message', MessageSchema)
